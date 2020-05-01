@@ -13,6 +13,7 @@ def square(side = 0, diagonal = 0, area = 0, r = 3):
         diagonal = (side ** 2 * 2) ** 0.5
     else:
         print('Unable to realize operation with given data')
+    print(' ')
     print('Lado: ' + str(round(side, r)))
     print('Diagonal: ' + str(round(diagonal, r)))
     print('Area: ' + str(round(area, r)))
@@ -29,6 +30,7 @@ def rectangle(height = 0, base = 0, diagonal = 0, area = 0, r = 3):
         area = height * base
     else: 
         print('Unable to realize operation with given data')
+    print(' ')
     print('Height: ' + str(round(height, r)))
     print('Base: ' + str(round(base, r)))
     print('Diagonal: ' + str(round(diagonal, r)))
@@ -43,6 +45,7 @@ def triangle(height = 0, base = 0, area = 0, r = 3):
         height = base / area * 2
     else:
         print('Unable to realize operation with given data')
+    print(' ')
     print('Height: ' + str(round(height, r)))
     print('Base: ' + str(round(base, r)))
     print('Area: ' + str(round(area, r)))
@@ -56,6 +59,7 @@ def paralel(height = 0, base = 0, area = 0, r = 3):
         height = base / area * 2
     else:
         print('Unable to realize operation with given data')
+    print(' ')
     print('Height: ' + str(round(height, r)))
     print('Base: ' + str(round(base, r)))
     print('Area: ' + str(round(area, r)))
@@ -65,6 +69,7 @@ def trap(height = 0, side1 = 0, side2 = 0, area = 0, r = 3):
         area = (side1 + side2) / 2 * height 
     else:
         print('Unable to realize operation with given data')
+    print(' ')
     print('Height: ' + str(round(height, r)))
     print('Side 1: ' + str(round(side1, r)))
     print('Side 2: ' + str(round(side2, r)))
@@ -89,6 +94,7 @@ def circle(radius = 0, diameter = 0, circumsference = 0, area = 0, r = 3):
         circumsference = 2 * math.pi * radius
     else:
         print('Unable to realize operation with given data')
+    print(' ')
     print('Radius: ' + str(round(radius, r)))
     print('Diameter: ' + str(round(diameter, r)))
     print('Circumsference: ' + str(round(circumsference, r)))
@@ -114,6 +120,7 @@ def cube(side = 0, diagonal = 0, area = 0, volume = 0, r = 3):
         area = lado ** 2 * 6
     else:
         print('Unable to realize operation with given data')
+    print(' ')
     print('Side: ' + str(round(side, r)))
     print('Diagonal: ' + str(round(diagonal, r)))
     print('Area: ' + str(round(area, r)))
@@ -164,6 +171,7 @@ def parallelepiped(base = 0, height = 0, depth = 0, diagonal = 0, area = 0, volu
         if value2 == depth:
             va3 = depth
             va1 = value3
+    print(' ')
     print('Base: ' + str(round(va1, r)))
     print('Height: ' + str(round(va2, r)))
     print('Depth: ' + str(round(va3, r)))
@@ -194,6 +202,7 @@ def pyramid(height = 0, edge1 = 0, edge2 = 0, base = 0, area = 0, volume = 0, r 
         area = base + edge1 * diagonalext * 2
     else:
         print('Unable to realize operation with given data')
+    print(' ')
     print('Height: ' + str(round(height, r)))
     print('Base edge: ' + str(round(edge1, r)))
     print('Height edge: ' + str(round(edge2, r)))
@@ -229,6 +238,7 @@ def cilinder(height = 0, radius = 0, diameter = 0, circumsference = 0, base = 0,
         volume = math.pi * (radius ** 2) * height
     else:
         print('Unable to realize operation with given data')
+    print(' ')
     print("Height: " + str(round(height, r)))
     print('Radius: ' + str(round(radius, r)))
     print('Diameter: ' + str(round(diameter, r)))
@@ -265,6 +275,7 @@ def sphere(radius = 0, diameter = 0, circumsference = 0, area = 0, volume = 0, r
         area = 4 * (radius ** 2) * math.pi
     else:
         print('Unable to realize operation with given data')
+    print(' ')
     print('Radius: ' + str(round(radius, r)))
     print('Diameter: ' + str(round(diameter, r)))
     print('Circumsference: ' + str(round(circumsference, r)))
@@ -322,6 +333,7 @@ def cone(height = 0, radius = 0, diameter = 0, circumsference = 0, base = 0, are
             area = base + math.pi * radius * ((height ** 2 + radius ** 2) ** 0.5)
     else: 
         print('Unable to realize operation with given data')
+    print(' ')
     print('Height: ' + str(round(height, r)))
     print('Radius: ' + str(round(radius, r)))
     print('Diameter: ' + str(round(diameter, r)))
@@ -444,6 +456,7 @@ def transf1(value, unit1, unit2, r = 3):
         value2 = value1 * 0.000621371192
     elif unit2 == 'legua' or unit2 == 'league' or unit2 == 'leagues':
         value2 = value1 * 0.0002071
+    print(' ')
     print(str(round(value, r)) + ' ' + unit1 + ' = ' + str(round(value2, r)) + ' ' + unit2)
 
 def transf2():
