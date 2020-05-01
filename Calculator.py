@@ -897,9 +897,9 @@ elif input1 == 'b':
 elif input1 == 'c':
     print('''Value type:
 a) Length
-b) Area
-c) Volume
-d) Weight''')
+b) Area (Not yet available)
+c) Volume (Not yet available)
+d) Weight (Not yet available)''')
     input2 = input()
     if input2 == 'a':
         vai1 = input('Value: ')
