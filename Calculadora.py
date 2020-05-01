@@ -1,76 +1,76 @@
 import math
 
-#Figuras 2D
-def cuadrado(lado = 0, diagonal = 0, area = 0, r = 3):
-    if lado != 0: 
-        diagonal = (lado ** 2 * 2) ** 0.5
-        area = lado ** 2
+#2D Figures
+def square(side = 0, diagonal = 0, area = 0, r = 3):
+    if side != 0: 
+        diagonal = (side ** 2 * 2) ** 0.5
+        area = side ** 2
     elif diagonal != 0:
-        lado = diagonal ** 2 / 2 ** 0.5
-        area = lado ** 2 * 2
+        side = diagonal ** 2 / 2 ** 0.5
+        area = side ** 2 * 2
     elif area != 0:
-        lado = area / 2 ** 0.5
-        diagonal = (lado ** 2 * 2) ** 0.5
+        side = area / 2 ** 0.5
+        diagonal = (side ** 2 * 2) ** 0.5
     else:
-        print('No se puede realizar la operacion con los datos aportados')
-    print('Lado: ' + str(round(lado, r)))
+        print('Not able to realize operation with given data')
+    print('Lado: ' + str(round(side, r)))
     print('Diagonal: ' + str(round(diagonal, r)))
     print('Area: ' + str(round(area, r)))
 
-def rectangulo(altura = 0, base = 0, diagonal = 0, area = 0, r = 3):
-    if altura != 0 and base != 0:
-        diagonal = (altura ** 2 + base ** 2) ** 0.5
-        area = altura * base
-    elif diagonal != 0 and altura != 0:
-        base = (diagonal ** 2 - altura ** 2) ** 0.5
-        area = altura * base
+def rectangle(height = 0, base = 0, diagonal = 0, area = 0, r = 3):
+    if height != 0 and base != 0:
+        diagonal = (height ** 2 + base ** 2) ** 0.5
+        area = height * base
+    elif diagonal != 0 and height != 0:
+        base = (diagonal ** 2 - height ** 2) ** 0.5
+        area = height * base
     elif diagonal != 0 and base != 0:
-        altura = (diagonal ** 2 - base ** 2) ** 0.5
-        area = altura * base
+        height = (diagonal ** 2 - base ** 2) ** 0.5
+        area = height * base
     else: 
-        print('No se puede realizar la operacion con los datos aportados')
-    print('Altura: ' + str(round(altura, r)))
+        print('Not able to realize operation with given data')
+    print('Height: ' + str(round(height, r)))
     print('Base: ' + str(round(base, r)))
     print('Diagonal: ' + str(round(diagonal, r)))
     print('Area: ' + str(round(area, r)))
 
-def triangulo(altura = 0, base = 0, area = 0, r = 3):
-    if altura != 0 and base != 0:
-        area = base * altura / 2
-    elif altura != 0 and area != 0:
-        base = altura / area * 2
+def triangle(height = 0, base = 0, area = 0, r = 3):
+    if height != 0 and base != 0:
+        area = base * height / 2
+    elif height != 0 and area != 0:
+        base = height / area * 2
     elif base != 0 and area != 0:
-        altura = base / area * 2
+        height = base / area * 2
     else:
-        print('No se puede realizar la operacion con los datos aportados')
-    print('Altura: ' + str(round(altura, r)))
+        print('Not able to realize operation with given data')
+    print('Height: ' + str(round(height, r)))
     print('Base: ' + str(round(base, r)))
     print('Area: ' + str(round(area, r)))
 
-def paralel(altura = 0, base = 0, area = 0, r = 3):
-    if altura != 0 and base != 0:
-        area = base * altura / 2
-    elif altura != 0 and area != 0:
-        base = altura / area * 2
+def paralel(height = 0, base = 0, area = 0, r = 3):
+    if height != 0 and base != 0:
+        area = base * height / 2
+    elif height != 0 and area != 0:
+        base = height / area * 2
     elif base != 0 and area != 0:
-        altura = base / area * 2
+        height = base / area * 2
     else:
-        print('No se puede realizar la operacion con los datos aportados')
-    print('Altura: ' + str(round(altura, r)))
+        print('Not able to realize operation with given data')
+    print('Height: ' + str(round(height, r)))
     print('Base: ' + str(round(base, r)))
     print('Area: ' + str(round(area, r)))
 
-def trap(altura = 0, lado1 = 0, lado2 = 0, area = 0, r = 3):
-    if altura != 0 and lado1 != 0 and lado2 != 0:
-        area = (lado1 + lado2) / 2 * altura 
+def trap(height = 0, side1 = 0, side2 = 0, area = 0, r = 3):
+    if height != 0 and side1 != 0 and side2 != 0:
+        area = (side1 + side2) / 2 * height 
     else:
         print('No se puede realizar la operacion con los datos aportados')
-    print('Altura: ' + str(round(altura, r)))
-    print('Lado 1: ' + str(round(lado1, r)))
-    print('Lado 2: ' + str(round(lado2, r)))
+    print('Height: ' + str(round(height, r)))
+    print('Side 1: ' + str(round(side1, r)))
+    print('Side 2: ' + str(round(side2, r)))
     print('Area: ' + str(round(area, r)))
 
-def circulo(radio = 0, diametro = 0, circunsferencia = 0, area = 0, r = 3):
+def circle(radio = 0, diametro = 0, circunsferencia = 0, area = 0, r = 3):
     if radio != 0:
         diametro = radio * 2
         circunsferencia = 2 * math.pi * radio
@@ -449,37 +449,36 @@ def transf1(valor, unidad1, unidad2, r = 3):
 def transf2():
     pass
 
-r = input('Redondear Decimales: ')
+r = input('Decimal Rounding: ')
 if r != '':
     r = int(r)
 
-print('''Tipo de operacion:
-a) Areas y Volumen
-b) Trigonometría
-c) Variables y Gleichungen
-e) Transformacion de valores''')
+print('''Operation:
+a) Areas and Volume
+b) Trigonometry
+c) Value transformation''')
 input1 = input()
 
 if input1 == 'a':
-    print('''Figura:
+    print('''Figure:
     2D
-a) Cuadrado
-b) Rectangulo
-c) Triangulo
-d) Paralelogramo
-e) Trapecio
-f) Circulo
+a) Square
+b) Rectangle
+c) Triangle
+d) Parallelogram
+e) Trapeze
+f) Circle
     3D
-g) Cubo
-h) Paralelepipedo
-i) Piramide
-j) Cilindro
-k) Esfera
-l) Cono''')
+g) Cube
+h) Parallelepiped
+i) Pyramid
+j) Cilinder
+k) Sphere
+l) Cone''')
     input2 = input()
 
     if input2 == 'a':
-        ci11 = input('Lado: ')
+        ci11 = input('Side: ')
         if ci11 == '':
             ci1 = 0
         else:
@@ -495,12 +494,12 @@ l) Cono''')
         else:
             ci3 = ci13
         if r == '':
-            cuadrado(float(ci1), float(ci2), float(ci3))
+            square(float(ci1), float(ci2), float(ci3))
         else:
-            cuadrado(float(ci1), float(ci2), float(ci3), r)
+            square(float(ci1), float(ci2), float(ci3), r)
 
     elif input2 == 'b':
-        ri11 = input('Altura: ')
+        ri11 = input('Height: ')
         if ri11 == '':
             ri1 = 0
         else:
@@ -524,12 +523,12 @@ l) Cono''')
         else:
             ri4 = ri14
         if r == '':
-            rectangulo(float(ri1), float(ri2), float(ri3), float(ri4))
+            rectangle(float(ri1), float(ri2), float(ri3), float(ri4))
         else:
-            rectangulo(float(ri1), float(ri2), float(ri3), float(ri4), r)
+            rectangle(float(ri1), float(ri2), float(ri3), float(ri4), r)
 
     elif input2 == 'c':
-        ti11 = input('Altura: ')
+        ti11 = input('Height: ')
         if ti11 == '':
             ti1 = 0
         else:
@@ -545,9 +544,9 @@ l) Cono''')
         else:
             ti3 = ti13
         if r == '':
-            triangulo(float(ti1), float(ti2), float(ti3))
+            triangle(float(ti1), float(ti2), float(ti3))
         else:
-            triangulo(float(ti1), float(ti2), float(ti3), r)
+            triangle(float(ti1), float(ti2), float(ti3), r)
 
     elif input2 == 'd':
         pi11 = input('Altura: ')
@@ -618,9 +617,9 @@ l) Cono''')
         else:
             ci4 = ci14
         if r == '':
-            circulo(float(ci1), float(ci2), float(ci3), float(ci4))
+            circle(float(ci1), float(ci2), float(ci3), float(ci4))
         else:
-            circulo(float(ci1), float(ci2), float(ci3), float(ci4), r)
+            circle(float(ci1), float(ci2), float(ci3), float(ci4), r)
 
     elif input2 == 'g':
         cubi1 = input('Arista: ')
@@ -864,7 +863,7 @@ elif input1 == 'b':
     else:
         trigonom(float(tr1), float(tr2), float(tr3), float(tr4), float(tr5), r)
 
-elif input1 == 'e':
+elif input1 == 'c':
     print(''' Tipo de valores:
 a) Longitud
 b) Area
