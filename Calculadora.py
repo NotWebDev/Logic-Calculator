@@ -12,7 +12,7 @@ def square(side = 0, diagonal = 0, area = 0, r = 3):
         side = area / 2 ** 0.5
         diagonal = (side ** 2 * 2) ** 0.5
     else:
-        print('Not able to realize operation with given data')
+        print('Unable to realize operation with given data')
     print('Lado: ' + str(round(side, r)))
     print('Diagonal: ' + str(round(diagonal, r)))
     print('Area: ' + str(round(area, r)))
@@ -28,7 +28,7 @@ def rectangle(height = 0, base = 0, diagonal = 0, area = 0, r = 3):
         height = (diagonal ** 2 - base ** 2) ** 0.5
         area = height * base
     else: 
-        print('Not able to realize operation with given data')
+        print('Unable to realize operation with given data')
     print('Height: ' + str(round(height, r)))
     print('Base: ' + str(round(base, r)))
     print('Diagonal: ' + str(round(diagonal, r)))
@@ -42,7 +42,7 @@ def triangle(height = 0, base = 0, area = 0, r = 3):
     elif base != 0 and area != 0:
         height = base / area * 2
     else:
-        print('Not able to realize operation with given data')
+        print('Unable to realize operation with given data')
     print('Height: ' + str(round(height, r)))
     print('Base: ' + str(round(base, r)))
     print('Area: ' + str(round(area, r)))
@@ -55,7 +55,7 @@ def paralel(height = 0, base = 0, area = 0, r = 3):
     elif base != 0 and area != 0:
         height = base / area * 2
     else:
-        print('Not able to realize operation with given data')
+        print('Unable to realize operation with given data')
     print('Height: ' + str(round(height, r)))
     print('Base: ' + str(round(base, r)))
     print('Area: ' + str(round(area, r)))
@@ -64,271 +64,271 @@ def trap(height = 0, side1 = 0, side2 = 0, area = 0, r = 3):
     if height != 0 and side1 != 0 and side2 != 0:
         area = (side1 + side2) / 2 * height 
     else:
-        print('No se puede realizar la operacion con los datos aportados')
+        print('Unable to realize operation with given data')
     print('Height: ' + str(round(height, r)))
     print('Side 1: ' + str(round(side1, r)))
     print('Side 2: ' + str(round(side2, r)))
     print('Area: ' + str(round(area, r)))
 
-def circle(radio = 0, diametro = 0, circunsferencia = 0, area = 0, r = 3):
-    if radio != 0:
-        diametro = radio * 2
-        circunsferencia = 2 * math.pi * radio
-        area = math.pi * (radio ** 2)
-    elif diametro != 0:
-        radio = diametro * 2
-        circunsferencia = 2 * math.pi * radio
-        area = math.pi * (radio ** 2)
-    elif circunsferencia != 0:
-        radio = circunsferencia / 2 / math.pi
-        diametro = radio * 2
-        area = math.pi * (radio ** 2)
+def circle(radius = 0, diameter = 0, circumsference = 0, area = 0, r = 3):
+    if radius != 0:
+        diameter = radius * 2
+        circumsference = 2 * math.pi * radius
+        area = math.pi * (radius ** 2)
+    elif diameter != 0:
+        radius = diameter * 2
+        circumsference = 2 * math.pi * radius
+        area = math.pi * (radius ** 2)
+    elif circumsference != 0:
+        radius = circumsference / 2 / math.pi
+        diameter = radius * 2
+        area = math.pi * (radius ** 2)
     elif area != 0:
-        radio = (area / math.pi) ** 0.5
-        diametro = radio * 2
-        circunsferencia = 2 * math.pi * radio
+        radius = (area / math.pi) ** 0.5
+        diameter = radius * 2
+        circumsference = 2 * math.pi * radius
     else:
-        print('No se puede realizar la operacion con los datos aportados')
-    print('Radio: ' + str(round(radio, r)))
-    print('Diametro: ' + str(round(diametro, r)))
-    print('Circunsferencia: ' + str(round(circunsferencia, r)))
+        print('Unable to realize operation with given data')
+    print('Radius: ' + str(round(radius, r)))
+    print('Diameter: ' + str(round(diameter, r)))
+    print('Circumsference: ' + str(round(circumsference, r)))
     print('Area: ' + str(round(area, r)))
 
 #Figuras 3D
-def cubo(lado = 0, diagonal = 0, area = 0, volumen = 0, r = 3):
-    if lado != 0:
-        diagonal = (lado ** 2 * 3) ** 0.5
-        area = lado ** 2 * 6
-        volumen = lado ** 3
+def cube(side = 0, diagonal = 0, area = 0, volume = 0, r = 3):
+    if side != 0:
+        diagonal = (side ** 2 * 3) ** 0.5
+        area = side ** 2 * 6
+        volume = side ** 3
     if diagonal != 0:
-        lado = diagonal ** 2 / 3 ** 0.5
-        area = lado ** 2 * 6
-        volumen = lado ** 3
+        side = diagonal ** 2 / 3 ** 0.5
+        area = side ** 2 * 6
+        volume = side ** 3
     if area != 0:
-        lado = area / 6 ** 0.5
-        diagonal = (lado ** 2 * 3) ** 0.5
-        volumen = lado ** 3
-    if volumen != 0:
-        lado = volumen ** (1/3)
+        side = area / 6 ** 0.5
+        diagonal = (side ** 2 * 3) ** 0.5
+        volume = side ** 3
+    if volume != 0:
+        lado = volume ** (1/3)
         diagonal = (lado ** 2 * 3) ** 0.5
         area = lado ** 2 * 6
     else:
-        print('No se puede realizar la operacion con los datos aportados')
-    print('Lado: ' + str(round(lado, r)))
+        print('Unable to realize operation with given data')
+    print('Side: ' + str(round(side, r)))
     print('Diagonal: ' + str(round(diagonal, r)))
     print('Area: ' + str(round(area, r)))
-    print('Volumen: ' + str(round(volumen, r)))
+    print('Volume: ' + str(round(volume, r)))
 
-def paralelepipedo(base = 0, altura = 0, profundidad = 0, diagonal = 0, area = 0, volumen = 0, r = 3):
-    dimensiones = [base, altura, profundidad]
-    valores = 0
-    valor1 = 0
-    valor2 = 0
-    for dimension in dimensiones:
+def parallelepiped(base = 0, height = 0, depth = 0, diagonal = 0, area = 0, volume = 0, r = 3):
+    dimensions = [base, height, depth]
+    values = 0
+    value1 = 0
+    value2 = 0
+    for dimension in dimensions:
         if dimension != 0:
-            if valor1 == 0:
-                valores += 1
-                valor1 = dimension
+            if value1 == 0:
+                values += 1
+                value1 = dimension
             else:
-                if valores != 2:
-                    valor2 = dimension
-                    valores += 1
+                if valuees != 2:
+                    value2 = dimension
+                    valuees += 1
                 else:
-                    valor3 = dimension
+                    value3 = dimension
 
-    if valores == 3:
-        diagonal = (valor1 ** 2 + valor2 ** 2 + valor3 ** 2) ** 0.5
-        area = base * altura * 2 + profundidad * altura * 2 + base * profundidad * 2
-        volumen = base * altura * profundidad
-    elif valores == 2 and diagonal != 0:
-        valor3 = (diagonal ** 2 - valor1 ** 2 + valor2 ** 2) ** 0.5
-        area = valor1 * valor2 * 2 + valor3 * valor2 * 2 + valor1 * valor3 * 2
-        volumen = valor1 * valor2 * valor3
-    elif valores == 2 and volumen != 0:
-        valor3 = volumen / valor1 / valor2 
-        diagonal = (valor1 ** 2 + valor2 ** 2 + valor3 ** 2)
-        area = valor1 * valor2 * 2 + valor3 * valor2 * 2 + valor1 * valor3 * 2
+    if values == 3:
+        diagonal = (value1 ** 2 + value2 ** 2 + value3 ** 2) ** 0.5
+        area = base * height * 2 + depth * height * 2 + base * depth * 2
+        volume = base * height * depth
+    elif values == 2 and diagonal != 0:
+        value3 = (diagonal ** 2 - value1 ** 2 + value2 ** 2) ** 0.5
+        area = value1 * value2 * 2 + value3 * value2 * 2 + value1 * value3 * 2
+        volume = value1 * value2 * value3
+    elif values == 2 and volume != 0:
+        value3 = volume / value1 / value2 
+        diagonal = (value1 ** 2 + value2 ** 2 + value3 ** 2)
+        area = value1 * value2 * 2 + value3 * value2 * 2 + value1 * value3 * 2
     else:
-        print('No se puede realizar la operacion con los datos aportados')
+        print('Unable to realize operation with given data')
     
-    if valor1 == base:
+    if value1 == base:
         va1 = base 
-        if valor2 == altura:
-            va2 = altura
-            va3 = valor3
-        elif valor2 == profundidad:
-            va3 = profundidad
-            va2 = valor3 
-    elif valor1 == altura:
-        va2 = altura 
-        if valor2 == profundidad:
-            va3 = profundidad
-            va1 = valor3
+        if value2 == height:
+            va2 = height
+            va3 = value3
+        elif value2 == depth:
+            va3 = depth
+            va2 = value3 
+    elif value1 == height:
+        va2 = height 
+        if value2 == depth:
+            va3 = depth
+            va1 = value3
     print('Base: ' + str(round(va1, r)))
-    print('Altura: ' + str(round(va2, r)))
-    print('Profundidad: ' + str(round(va3, r)))
+    print('Height: ' + str(round(va2, r)))
+    print('Depth: ' + str(round(va3, r)))
     print('Diagonal: ' + str(round(diagonal, r)))
     print('Area: ' + str(round(area, r)))
-    print('Volumen: ' + str(round(volumen, r)))
+    print('Volume: ' + str(round(volume, r)))
 
-def piramide(altura = 0, arista1 = 0, arista2 = 0, base = 0, area = 0, volumen = 0, r = 3):
-    if altura != 0 and arista1 != 0 and arista2 != 0:
-        base = arista1 ** 2
-        diagonalext = (altura ** 2 + arista1 ** 2) ** 0.5
-        area = base + arista1 * diagonalext * 2
-        volumen = base * altura / 3
-    elif altura != 0 and arista2 != 0 and base != 0:
-        arista1 = base ** 0.5
-        diagonalext = (altura ** 2 + arista1 ** 2) ** 0.5
-        area = base + arista1 * diagonalext * 2
-        volumen = base * altura / 3
-    elif volumen != 0 and arista1 != 0 and arista2 != 0:
-        altura = volumen * 3 / (arista1 ** 2)
-        base = arista1 ** 2
-        diagonalext = (altura ** 2 + arista1 ** 2) ** 0.5
-        area = base + arista1 * diagonalext * 2
-    elif volumen != 0 and altura != 0 and arista2 != 0:
-        arista1 = (volumen * 3 / altura) ** 0.5
-        base = arista1 ** 2
-        diagonalext = (altura ** 2 + arista1 ** 2) ** 0.5
-        area = base + arista1 * diagonalext * 2
+def pyramid(height = 0, edge1 = 0, edge2 = 0, base = 0, area = 0, volume = 0, r = 3):
+    if height != 0 and edge1 != 0 and edge2 != 0:
+        base = edge1 ** 2
+        diagonalext = (height ** 2 + edge1 ** 2) ** 0.5
+        area = base + edge1 * diagonalext * 2
+        volume = base * height / 3
+    elif height != 0 and edge2 != 0 and base != 0:
+        edge1 = base ** 0.5
+        diagonalext = (height ** 2 + edge1 ** 2) ** 0.5
+        area = base + edge1 * diagonalext * 2
+        volume = base * height / 3
+    elif volume != 0 and edge1 != 0 and edge2 != 0:
+        height = volume * 3 / (edge1 ** 2)
+        base = edge1 ** 2
+        diagonalext = (height ** 2 + edge1 ** 2) ** 0.5
+        area = base + edge1 * diagonalext * 2
+    elif volume != 0 and height != 0 and edge2 != 0:
+        edge1 = (volume * 3 / height) ** 0.5
+        base = edge1 ** 2
+        diagonalext = (height ** 2 + edge1 ** 2) ** 0.5
+        area = base + edge1 * diagonalext * 2
     else:
-        print('No se puede realizar la operacion con los datos aportados')
-    print('Altura: ' + str(round(altura, r)))
-    print('Arista de base: ' + str(round(arista1, r)))
-    print('Arista de altura: ' + str(round(arista2, r)))
+        print('Unable to realize operation with given data')
+    print('Height: ' + str(round(height, r)))
+    print('Base edge: ' + str(round(edge1, r)))
+    print('Height edge: ' + str(round(edge2, r)))
     print('Base: ' + str(round(base, r)))
     print('Area: ' + str(round(area, r)))
-    print('Volumen: ' + str(round(volumen, r)))
+    print('Volume: ' + str(round(volume, r)))
 
-def cilindro(altura = 0, radio = 0, diametro = 0, circunsferencia = 0, base = 0, area = 0, volumen = 0, r = 3):
-    if altura != 0 and radio != 0:
-        diametro = radio * 2
-        circunsferencia = diametro * math.pi
-        base = (radio ** 2) * math.pi
-        area = circunsferencia * (radio + altura)
-        volumen = math.pi * (radio ** 2) * altura
-    elif altura != 0 and diametro != 0:
-        radio = diametro / 2
-        circunsferencia = diametro * math.pi
-        base = (radio ** 2) * math.pi
-        area = circunsferencia * (radio + altura)
-        volumen = math.pi * (radio ** 2) * altura
-    elif altura != 0 and circunsferencia != 0:
-        radio = circunsferencia / 2 / math.pi
-        diametro = radio * 2
-        base = (radio ** 2) * math.pi
-        area = circunsferencia * (radio + altura)
-        volumen = math.pi * (radio ** 2) * altura
-    elif altura != 0 and base != 0:
-        radio = (base / math.pi) ** 0.5
-        diametro = radio * 2
-        circunsferencia = diametro * math.pi
-        base = (radio ** 2) * math.pi
-        area = circunsferencia * (radio + altura)
-        volumen = math.pi * (radio ** 2) * altura
+def cilinder(height = 0, radius = 0, diameter = 0, circumsference = 0, base = 0, area = 0, volume = 0, r = 3):
+    if height != 0 and radius != 0:
+        diameter = radius * 2
+        circumsference = diameter * math.pi
+        base = (radius ** 2) * math.pi
+        area = circumsference * (radius + height)
+        volume = math.pi * (radius ** 2) * height
+    elif height != 0 and diameter != 0:
+        radius = diameter / 2
+        circumsference = diameter * math.pi
+        base = (radius ** 2) * math.pi
+        area = circumsference * (radius + height)
+        volume = math.pi * (radius ** 2) * height
+    elif height != 0 and circumsference != 0:
+        radius = circumsference / 2 / math.pi
+        diameter = radius * 2
+        base = (radius ** 2) * math.pi
+        area = circumsference * (radius + height)
+        volume = math.pi * (radius ** 2) * height
+    elif height != 0 and base != 0:
+        radius = (base / math.pi) ** 0.5
+        diameter = radius * 2
+        circumsference = diameter * math.pi
+        base = (radius ** 2) * math.pi
+        area = circumsference * (radius + height)
+        volume = math.pi * (radius ** 2) * height
     else:
-        print('No se puede realizar la operacion con los datos aportados')
-    print("Altura: " + str(round(altura, r)))
-    print('Radio: ' + str(round(radio, r)))
-    print('Diametro: ' + str(round(diametro, r)))
-    print('Circunsferencia: ' + str(round(circunsferencia, r)))
+        print('Unable to realize operation with given data')
+    print("Height: " + str(round(height, r)))
+    print('Radius: ' + str(round(radius, r)))
+    print('Diameter: ' + str(round(diameter, r)))
+    print('Circumsference: ' + str(round(circumsference, r)))
     print('Base: ' + str(round(base, r)))
     print('Area: ' + str(round(area, r)))
-    print('Volumen: ' + str(round(volumen, r)))
+    print('volume: ' + str(round(volume, r)))
 
-def esfera(radio = 0, diametro = 0, circunsferencia = 0, area = 0, volumen = 0, r = 3):
-    if radio != 0:
-        diametro = radio * 2
-        circunsferencia = radio * 2 * math.pi
-        area = 4 * (radio ** 2) * math.pi
-        volumen = (4/3) * math.pi * (radio ** 3)
-    elif diametro != 0:
-        radio = diametro / 2
-        circunsferencia = radio * 2 * math.pi
-        area = 4 * (radio ** 2) * math.pi
-        volumen = (4/3) * math.pi * (radio ** 3)
-    elif circunsferencia != 0:
-        radio = circunsferencia / 2 / math.pi
-        diametro = radio * 2
-        area = 4 * (radio ** 2) * math.pi
-        volumen = (4/3) * math.pi * (radio ** 3)
+def sphere(radius = 0, diameter = 0, circumsference = 0, area = 0, volume = 0, r = 3):
+    if radius != 0:
+        diameter = radius * 2
+        circumsference = radius * 2 * math.pi
+        area = 4 * (radius ** 2) * math.pi
+        volume = (4/3) * math.pi * (radius ** 3)
+    elif diameter != 0:
+        radius = diameter / 2
+        circumsference = radius * 2 * math.pi
+        area = 4 * (radius ** 2) * math.pi
+        volume = (4/3) * math.pi * (radius ** 3)
+    elif circumsference != 0:
+        radius = circumsference / 2 / math.pi
+        diameter = radius * 2
+        area = 4 * (radius ** 2) * math.pi
+        volume = (4/3) * math.pi * (radius ** 3)
     elif area != 0:
-        radio = (area / 4 / math.pi) ** 0.5
-        diametro = radio * 2
-        circunsferencia = radio * 2 * math.pi
-        volumen = (4/3) * math.pi * (radio ** 3)
-    elif volumen != 0:
-        radio = (volumen / (4/3) / math.pi) ** (1/3)
-        diametro = radio * 2
-        circunsferencia = radio * 2 * math.pi
-        area = 4 * (radio ** 2) * math.pi
+        radius = (area / 4 / math.pi) ** 0.5
+        diameter = radius * 2
+        circumsference = radius * 2 * math.pi
+        volume = (4/3) * math.pi * (radius ** 3)
+    elif volume != 0:
+        radius = (volume / (4/3) / math.pi) ** (1/3)
+        diameter = radius * 2
+        circumsference = radius * 2 * math.pi
+        area = 4 * (radius ** 2) * math.pi
     else:
-        print('No se puede realizar la operacion con los datos aportados')
-    print('Radio: ' + str(round(radio, r)))
-    print('Diametro: ' + str(round(diametro, r)))
-    print('Circunsferencia: ' + str(round(circunsferencia, r)))
+        print('Unable to realize operation with given data')
+    print('Radius: ' + str(round(radius, r)))
+    print('Diameter: ' + str(round(diameter, r)))
+    print('Circumsference: ' + str(round(circumsference, r)))
     print('Area: ' + str(round(area, r)))
-    print('Volumen: ' + str(round(volumen, r)))
+    print('Volume: ' + str(round(volume, r)))
 
-def cono(altura = 0, radio = 0, diametro = 0, circunsferencia = 0, base = 0, area = 0, volumen = 0, r = 3):
-    if altura != 0:
-        if radio != 0:
-            diametro = radio * 2
-            circunsferencia = 2 * math.pi * radio
-            base = math.pi * (radio ** 2)
-            s = (altura ** 2 + radio ** 2) ** 0.5
-            area = math.pi * (radio ** 2) + (math.pi * radio * s)
-            volumen = (1/3) * math.pi * (radio ** 2) * altura
+def cone(height = 0, radius = 0, diameter = 0, circumsference = 0, base = 0, area = 0, volume = 0, r = 3):
+    if height != 0:
+        if radius != 0:
+            diameter = radius * 2
+            circumsference = 2 * math.pi * radius
+            base = math.pi * (radius ** 2)
+            s = (height ** 2 + radius ** 2) ** 0.5
+            area = math.pi * (radius ** 2) + (math.pi * radius * s)
+            volume = (1/3) * math.pi * (radius ** 2) * height
             print(s)
-        elif diametro != 0:
-            radio = diametro / 2
-            circunsferencia = 2 * math.pi * radio
-            base = math.pi * (radio ** 2)
-            area = base + math.pi * radio * ((altura ** 2 + radio ** 2) ** 0.5)
-            volumen = (1/3) * math.pi * (radio ** 2) * altura
-        elif circunsferencia != 0:
-            radio = circunsferencia / 2 / math.pi
-            diametro = radio * 2
-            base = math.pi * (radio ** 2)
-            area = base + math.pi * radio * ((altura ** 2 + radio ** 2) ** 0.5)
-            volumen = (1/3) * math.pi * (radio ** 2) * altura
+        elif diameter != 0:
+            radius = diameter / 2
+            circumsference = 2 * math.pi * radius
+            base = math.pi * (radius ** 2)
+            area = base + math.pi * radius * ((height ** 2 + radius ** 2) ** 0.5)
+            volume = (1/3) * math.pi * (radius ** 2) * height
+        elif circumsference != 0:
+            radius = circumsference / 2 / math.pi
+            diameter = radius * 2
+            base = math.pi * (radius ** 2)
+            area = base + math.pi * radius * ((height ** 2 + radius ** 2) ** 0.5)
+            volume = (1/3) * math.pi * (radius ** 2) * height
         elif base != 0:
-            radio = (base / math.pi) ** 0.5
-            diametro = radio * 2
-            circunsferencia = 2 * math.pi * radio
-            area = base + math.pi * radio * ((altura ** 2 + radio ** 2) ** 0.5)
-            volumen = (1/3) * math.pi * (radio ** 2) * altura
-        elif volumen != 0:
-            radio = (volumen / (1/3) / math.pi / altura) ** 0.5
-            diametro = radio * 2
-            circunsferencia = 2 * math.pi * radio
-            base = math.pi * (radio ** 2)
-            area = base + math.pi * radio * ((altura ** 2 + radio ** 2) ** 0.5)
-            volumen = (1/3) * math.pi * (radio ** 2) * altura
-    elif radio != 0:
+            radius = (base / math.pi) ** 0.5
+            diameter = radius * 2
+            circumsference = 2 * math.pi * radius
+            area = base + math.pi * radius * ((height ** 2 + radius ** 2) ** 0.5)
+            volume = (1/3) * math.pi * (radius ** 2) * height
+        elif volume != 0:
+            radius = (volume / (1/3) / math.pi / height) ** 0.5
+            diameter = radius * 2
+            circumsference = 2 * math.pi * radius
+            base = math.pi * (radius ** 2)
+            area = base + math.pi * radius * ((height ** 2 + radius ** 2) ** 0.5)
+            volume = (1/3) * math.pi * (radius ** 2) * height
+    elif radius != 0:
         if area != 0:
-            diametro = radio * 2
-            circunsferencia = 2 * math.pi * radio
-            base = math.pi * (radio ** 2)
-            altura = ((area - base / math.pi / radio) ** 2 - (radio ** 2)) ** 0.5
-            area = base + math.pi * radio * ((altura ** 2 + radio ** 2) ** 0.5)
-            volumen = (1/3) * math.pi * (radio ** 2) * altura
-        elif volumen != 0:
-            diametro = radio * 2
-            circunsferencia = 2 * math.pi * radio
-            base = math.pi * (radio ** 2)
-            altura = volumen - base / (1/3) / math.pi / (radio ** 2)
-            area = base + math.pi * radio * ((altura ** 2 + radio ** 2) ** 0.5)
+            diameter = radius * 2
+            circumsference = 2 * math.pi * radius
+            base = math.pi * (radius ** 2)
+            height = ((area - base / math.pi / radius) ** 2 - (radius ** 2)) ** 0.5
+            area = base + math.pi * radius * ((height ** 2 + radius ** 2) ** 0.5)
+            volume = (1/3) * math.pi * (radius ** 2) * height
+        elif volume != 0:
+            diameter = radius * 2
+            circumsference = 2 * math.pi * radius
+            base = math.pi * (radius ** 2)
+            height = volume - base / (1/3) / math.pi / (radius ** 2)
+            area = base + math.pi * radius * ((height ** 2 + radius ** 2) ** 0.5)
     else: 
-        print('No se puede realizar la operacion con los datos aportados')
-    print('Altura: ' + str(round(altura, r)))
-    print('Radio: ' + str(round(radio, r)))
-    print('Diametro: ' + str(round(diametro, r)))
-    print('Circunsferencia: ' + str(round(circunsferencia, r)))
+        print('Unable to realize operation with given data')
+    print('Height: ' + str(round(height, r)))
+    print('Radius: ' + str(round(radius, r)))
+    print('Diameter: ' + str(round(diameter, r)))
+    print('Circumsference: ' + str(round(circumsference, r)))
     print('Base: ' + str(round(base, r)))
     print('Area: ' + str(round(area, r)))
-    print('Volumen: ' + str(round(volumen, r)))
+    print('Volume: ' + str(round(volume, r)))
 
 #Trigonometria
 def trigonom(a = 0, b = 0, c = 0, aa = 0, ab = 0, r = 3):
@@ -372,79 +372,79 @@ def trigonom(a = 0, b = 0, c = 0, aa = 0, ab = 0, r = 3):
             b = (c ** 2 - a ** 2) ** 0.5
             aa = 90 - ab
     else:
-        print('No se puede realizar la operacion con los datos aportados')
+        print('Unable to realize operation with given data')
     print(' ')
-    print('Lado a: ' + str(round(a, 3)))
-    print('Lado b: ' + str(round(b, 3)))
-    print('Lado c: ' + str(round(c, 3)))
-    print('Angulo de a: ' + str(round(aa, 3)))
-    print('Angulo de b: ' + str(round(ab, 3)))
+    print('Side A: ' + str(round(a, 3)))
+    print('Side B: ' + str(round(b, 3)))
+    print('Hypotenuse: : ' + str(round(c, 3)))
+    print('Angle opposite to side A: ' + str(round(aa, 3)))
+    print('Angle opposite to side B: ' + str(round(ab, 3)))
 
-#Transformacion de valores
-def transf1(valor, unidad1, unidad2, r = 3):
-    valor1 = valor
-    if unidad1 == 'mm' or unidad1 == 'milimetros':
-        valor1 = valor1 / 1000
-    elif unidad1 == 'cm' or unidad1 == 'centimetros':
-        valor1 = valor1 / 100
-    elif unidad1 == 'dm' or unidad1 == 'decimetros':
-        valor1 = valor1 / 10
-    elif unidad1 == 'm' or unidad1 == 'metros':
-        valor1 *= 1
-    elif unidad1 == 'dam' or unidad1 == 'decametro':
-        valor1 *= 10
-    elif unidad1 == 'km' or unidad1 == 'kilometro':
-        valor1 *= 1000
+#Transformacion de valuees
+def transf1(value, unit1, unit2, r = 3):
+    value1 = value
+    if unit1 == 'mm' or unit1 == 'milimetros' or unit1 == 'millimeters':
+        value1 = value1 / 1000
+    elif unit1 == 'cm' or unit1 == 'centimetros' or unit1 == 'centimeters':
+        value1 = value1 / 100
+    elif unit1 == 'dm' or unit1 == 'decimetros' or unit1 == 'decimeters':
+        value1 = value1 / 10
+    elif unit1 == 'm' or unit1 == 'metros' or unit1 == 'meters':
+        value1 *= 1
+    elif unit1 == 'dam' or unit1 == 'decametros' or unit1 == 'decameters':
+        value1 *= 10
+    elif unit1 == 'km' or unit1 == 'kilometros' or unit1 == 'kilometers':
+        value1 *= 1000
 
-    elif unidad1 == 'mil':
-        valor1 *= 39370
-    elif unidad1 == 'in' or unidad1 == 'pulgada':
-        valor1 *= 39.37
-    elif unidad1 == 'ft' or unidad1 == 'pie':
-        valor1 *= 3.281
-    elif unidad1 == 'yd' or unidad1 == 'yarda':
-        valor1 *= 1.094
-    elif unidad1 == 'ch' or unidad1 == 'chain':
-        valor1 *= 0.04971
-    elif unidad1 == 'fur' or unidad1 == 'furlong':
-        valor1 *= 0.004971
-    elif unidad1 == 'mi' or unidad1 == 'milla':
-        valor1 *= 0.0006214
-    elif unidad1 == 'legua' or unidad1 == 'legua':
-        valor1 *= 0.0002071
+    elif unit1 == 'mil' or 'mils': 
+        value1 *= 39370
+    elif unit1 == 'in' or unit1 == 'pulgadas' or unit1 == 'inches':
+        value1 *= 39.37
+    elif unit1 == 'ft' or unit1 == 'pies' or unit1 == 'feet':
+        value1 *= 3.281
+    elif unit1 == 'yd' or unit1 == 'yardas' or unit1 == 'yards':
+        value1 *= 1.094
+    elif unit1 == 'ch' or unit1 == 'chain' or unit1 == 'chains':
+        value1 *= 0.04971
+    elif unit1 == 'fur' or unit1 == 'furlongs' or unit1 == 'furlongs':
+        value1 *= 0.004971
+    elif unit1 == 'mi' or unit1 == 'millas' or unit1 == 'miles':
+        value1 *= 0.0006214
+    elif unit1 == 'leguas' or unit1 == 'league' or unit1 == 'leagues':
+        value1 *= 0.0002071
 
-    valor2 = 0
+    value2 = 0
 
-    if unidad2 == 'mm' or unidad2 == 'milimetros':
-        valor2 = valor1 * 1000
-    elif unidad2 == 'cm' or unidad2 == 'centimetros':
-        valor2 = valor1 * 100
-    elif unidad2 == 'dm' or unidad2 == 'decimetros':
-        valor2 = valor1 * 10
-    elif unidad2 == 'm' or unidad2 == 'metros':
-        valor2 = valor1 
-    elif unidad2 == 'dam' or unidad2 == 'decametro':
-        valor2 = valor1 / 10
-    elif unidad2 == 'km' or unidad2 == 'kilometros':
-        valor2 = valor1 / 1000
+    if unit2 == 'mm' or unit2 == 'milimetros'  or unit2 == 'millimeters':
+        value2 = value1 * 1000
+    elif unit2 == 'cm' or unit2 == 'centimetros'  or unit2 == 'centimeters':
+        value2 = value1 * 100
+    elif unit2 == 'dm' or unit2 == 'decimetros' or unit2 == 'decimeters':
+        value2 = value1 * 10
+    elif unit2 == 'm' or unit2 == 'metros' or unit2 == 'meters':
+        value2 = value1 
+    elif unit2 == 'dam' or unit2 == 'decametros' or unit2 == 'decameters':
+        value2 = value1 / 10
+    elif unit2 == 'km' or unit2 == 'kilometros' or unit2 == 'kilometers':
+        value2 = value1 / 1000
 
-    elif unidad2 == 'mil':
-        valor2 = valor1 * 39370.0787
-    elif unidad2 == 'in' or unidad2 == 'pulgada':
-        valor2 = valor1 * 39.3700787
-    elif unidad2 == 'ft' or unidad2 == 'pie':
-        valor2 = valor1 * 3.2808399
-    elif unidad2 == 'yd' or unidad2 == 'yarda':
-        valor2 = valor1 * 1.0936133
-    elif unidad2 == 'ch' or unidad2 == 'chain':
-        valor2 = valor1 * 0.0497096954
-    elif unidad2 == 'fur' or unidad2 == 'furlong':
-        valor2 = valor1 * 0.00497096954
-    elif unidad2 == 'mi' or unidad2 == 'milla':
-        valor2 = valor1 * 0.000621371192
-    elif unidad2 == 'legua' or unidad2 == 'legua':
-        valor2 = valor1 * 0.0002071
-    print(str(round(valor, r)) + ' ' + unidad1 + ' = ' + str(round(valor2, r)) + ' ' + unidad2)
+    elif unit2 == 'mil' or unit2 == 'mils':
+        value2 = value1 * 39370.0787
+    elif unit2 == 'in' or unit2 == 'pulgadas' or unit2 == 'inches':
+        value2 = value1 * 39.3700787
+    elif unit2 == 'ft' or unit2 == 'pies' or unit2 == 'feet':
+        value2 = value1 * 3.2808399
+    elif unit2 == 'yd' or unit2 == 'yardas' or unit2 == 'yards':
+        value2 = value1 * 1.0936133
+    elif unit2 == 'ch' or unit2 == 'chain' or unit2 == 'chains':
+        value2 = value1 * 0.0497096954
+    elif unit2 == 'fur' or unit2 == 'furlongs' or unit2 == 'furlong':
+        value2 = value1 * 0.00497096954
+    elif unit2 == 'mi' or unit2 == 'millas' or unit2 == 'miles':
+        value2 = value1 * 0.000621371192
+    elif unit2 == 'legua' or unit2 == 'league' or unit2 == 'leagues':
+        value2 = value1 * 0.0002071
+    print(str(round(value, r)) + ' ' + unit1 + ' = ' + str(round(value2, r)) + ' ' + unit2)
 
 def transf2():
     pass
@@ -549,7 +549,7 @@ l) Cone''')
             triangle(float(ti1), float(ti2), float(ti3), r)
 
     elif input2 == 'd':
-        pi11 = input('Altura: ')
+        pi11 = input('height: ')
         if pi11 == '':
             pi1 = 0
         else:
@@ -570,17 +570,17 @@ l) Cone''')
             paralel(float(pi1), float(pi2), float(pi3), r)
 
     elif input2 == 'e':
-        ti11 = input('Altura: ')
+        ti11 = input('Height: ')
         if ti11 == '':
             ti1 = 0
         else:
             ti1 = ti11
-        ti12 = input('Lado 1: ')
+        ti12 = input('Side 1: ')
         if ti12 == '':
             ti2 = 0
         else:
             ti2 = ti12
-        ti13 = input('Lado 2: ')
+        ti13 = input('Side 2: ')
         if ti13 == '':
             ti3 = 0
         else:
@@ -596,17 +596,17 @@ l) Cone''')
             trap(float(ti1), float(ti2), float(ti3), float(ti4), r)
 
     elif input2 == 'f': 
-        ci11 = input('Radio: ')
+        ci11 = input('Radius: ')
         if ci11 == '':
             ci1 = 0
         else:
             ci1 = ci11
-        ci12 = input('Diametro: ')
+        ci12 = input('Diameter: ')
         if ci12 == '':
             ci2 = 0
         else:
             ci2 = ci12
-        ci13 = input('Circunsferencia: ')
+        ci13 = input('Circumsference: ')
         if ci13 == '':
             ci3 = 0
         else:
@@ -622,7 +622,7 @@ l) Cone''')
             circle(float(ci1), float(ci2), float(ci3), float(ci4), r)
 
     elif input2 == 'g':
-        cubi1 = input('Arista: ')
+        cubi1 = input('Edge: ')
         if cubi1 == '':
             cub1 = 0
         else:
@@ -637,15 +637,15 @@ l) Cone''')
             cub3 = 0
         else:
             cub3 = cubi3
-        cubi4 = input('Volumen: ')
+        cubi4 = input('Volume: ')
         if cubi4 == '':
             cub4 = 0
         else:
             cub4 = cubi4
         if r == '':
-            cubo(float(cub1), float(cub2), float(cub3), float(cub4))
+            cube(float(cub1), float(cub2), float(cub3), float(cub4))
         else:
-            cubo(float(cub1), float(cub2), float(cub3), float(cub4), r)
+            cube(float(cub1), float(cub2), float(cub3), float(cub4), r)
 
     elif input2 == 'h':
         parai1 = input('Base: ')
@@ -653,12 +653,12 @@ l) Cone''')
             para1 = 0
         else:
             para1 = parai1
-        parai2 = input('Altura: ')
+        parai2 = input('Height: ')
         if parai2 == '':
             para2 = 0
         else:
             para2 = parai2
-        parai3 = input('Profundidad: ')
+        parai3 = input('Depth: ')
         if parai3 == '':
             para3 = 0
         else:
@@ -673,28 +673,28 @@ l) Cone''')
             para5 = 0
         else:
             para5 = parai5
-        parai6 = input('Volumen: ')
+        parai6 = input('Volume: ')
         if parai6 == '':
             para6 = 0
         else:
             para6 = parai6
         if r == '':
-            paralelepipedo(float(para1), float(para2), float(para3), float(para4), float(para5), float(para6))
+            parallelepiped(float(para1), float(para2), float(para3), float(para4), float(para5), float(para6))
         else:
-            paralelepipedo(float(para1), float(para2), float(para3), float(para4), float(para5), float(para6), r)
+            parallelepiped(float(para1), float(para2), float(para3), float(para4), float(para5), float(para6), r)
 
     elif input2 == 'i':
-        parai1 = input('Altura: ')
+        parai1 = input('Height: ')
         if parai1 == '':
             para1 = 0
         else:
             para1 = parai1
-        parai2 = input('Arista de base: ')
+        parai2 = input('Base edge: ')
         if parai2 == '':
             para2 = 0
         else:
             para2 = parai2
-        parai3 = input('Arista de altura: ')
+        parai3 = input('Height edge: ')
         if parai3 == '':
             para3 = 0
         else:
@@ -709,33 +709,33 @@ l) Cone''')
             para5 = 0
         else:
             para5 = parai5
-        parai6 = input('Volumen: ')
+        parai6 = input('Volume: ')
         if parai6 == '':
             para6 = 0
         else:
             para6 = parai6
         if r == '':
-            piramide(float(para1), float(para2), float(para3), float(para4), float(para5), float(para6))
+            pyramid(float(para1), float(para2), float(para3), float(para4), float(para5), float(para6))
         else:
-            paralelepipedo(float(para1), float(para2), float(para3), float(para4), float(para5), float(para6), r)
+            pyramid(float(para1), float(para2), float(para3), float(para4), float(para5), float(para6), r)
 
     elif input2 == 'j':
-        cili1 = input('Altura: ')
+        cili1 = input('Height: ')
         if cili1 == '':
             cil1 = 0
         else:
             cil1 = cili1
-        cili2 = input('Radio: ')
+        cili2 = input('Radius: ')
         if cili2 == '':
             cil2 = 0
         else:
             cil2 = cili2
-        cili3 = input('Diametro: ')
+        cili3 = input('Diameter: ')
         if cili3 == '':
             cil3 = 0
         else:
             cil3 = cili3
-        cili4 = input('Circunsferencia: ')
+        cili4 = input('Circumsference: ')
         if cili4 == '':
             cil4 = 0
         else:
@@ -750,28 +750,28 @@ l) Cone''')
             cil6 = 0
         else:
             cil6 = cili6
-        cili7 = input('Volumen: ')
+        cili7 = input('Volume: ')
         if cili7 == '':
             cil7 = 0
         else:
             cil7 = cili7
         if r == '':
-            cilindro(float(cil1), float(cil2), float(cil3), float(cil4), float(cil5), float(cil6), float(cil7))
+            cilinder(float(cil1), float(cil2), float(cil3), float(cil4), float(cil5), float(cil6), float(cil7))
         else:
-            cilindro(float(cil1), float(cil2), float(cil3), float(cil4), float(cil5), float(cil6), float(cil7), r)
+            cilinder(float(cil1), float(cil2), float(cil3), float(cil4), float(cil5), float(cil6), float(cil7), r)
     
     elif input2 == 'k':
-        esfi1 = input('Radio: ')
+        esfi1 = input('Radius: ')
         if esfi1 == '':
             esf1 = 0
         else:
             esf1 = esfi1
-        esfi2 = input('Diametro: ')
+        esfi2 = input('Diameter: ')
         if esfi2 == '':
             esf2 = 0
         else:
             esf2 = esfi2
-        esfi3 = input('Circunsferencia: ')
+        esfi3 = input('Circumsference: ')
         if esfi3 == '':
             esf3 = 0
         else:
@@ -781,33 +781,33 @@ l) Cone''')
             esf4 = 0
         else:
             esf4 = esfi4
-        esfi5 = input('Volumen: ')
+        esfi5 = input('Volume: ')
         if esfi5 == '':
             esf5 = 0
         else:
             esf5 = esfi5
         if r == '':
-            esfera(float(esf1), float(esf2), float(esf3), float(esf4), float(esf5))
+            sphere(float(esf1), float(esf2), float(esf3), float(esf4), float(esf5))
         else:
-            esfera(float(esf1), float(esf2), float(esf3), float(esf4), float(esf5), r)
+            sphere(float(esf1), float(esf2), float(esf3), float(esf4), float(esf5), r)
 
     elif input2 == 'l':
-        cili1 = input('Altura: ')
+        cili1 = input('Height: ')
         if cili1 == '':
             cil1 = 0
         else:
             cil1 = cili1
-        cili2 = input('Radio: ')
+        cili2 = input('Radius: ')
         if cili2 == '':
             cil2 = 0
         else:
             cil2 = cili2
-        cili3 = input('Diametro: ')
+        cili3 = input('Diameter: ')
         if cili3 == '':
             cil3 = 0
         else:
             cil3 = cili3
-        cili4 = input('Circunsferencia: ')
+        cili4 = input('Circumsference: ')
         if cili4 == '':
             cil4 = 0
         else:
@@ -822,38 +822,38 @@ l) Cone''')
             cil6 = 0
         else:
             cil6 = cili6
-        cili7 = input('Volumen: ')
+        cili7 = input('Volume: ')
         if cili7 == '':
             cil7 = 0
         if r == '':
-            cono(float(cil1), float(cil2), float(cil3), float(cil4), float(cil5), float(cil6), float(cil7))
+            cone(float(cil1), float(cil2), float(cil3), float(cil4), float(cil5), float(cil6), float(cil7))
         else:
-            cono(float(cil1), float(cil2), float(cil3), float(cil4), float(cil5), float(cil6), float(cil7), r)
+            cone(float(cil1), float(cil2), float(cil3), float(cil4), float(cil5), float(cil6), float(cil7), r)
 
 elif input1 == 'b':
-    print('a) Operaciones Trigonometricas')
+    print('a) Trigonometrycal operations')
     inputb = input()
-    tri1 = input('Lado A: ')
+    tri1 = input('Side A: ')
     if tri1 == '':
         tr1 = 0
     else:
         tr1 = tri1
-    tri2 = input('Lado B: ')
+    tri2 = input('Side B: ')
     if tri2 == '':
         tr2 = 0
     else:
         tr2 = tri2
-    tri3 = input('Hipotenusa: ')
+    tri3 = input('Hypotenuse: ')
     if tri3 == '':
         tr3 = 0
     else:
         tr3 = tri3
-    tri4 = input('Angulo opuesto a Lado A: ')
+    tri4 = input('Angle opposite to side A: ')
     if tri4 == '':
         tr4 = 0
     else:
         tr4 = tri4
-    tri5 = input('Angulo opuesto a Lado B: ')
+    tri5 = input('Angle opposite to side B: ')
     if tri5 == '':
         tr5 = 0
     else:
@@ -864,17 +864,16 @@ elif input1 == 'b':
         trigonom(float(tr1), float(tr2), float(tr3), float(tr4), float(tr5), r)
 
 elif input1 == 'c':
-    print(''' Tipo de valores:
-a) Longitud
+    print('''Value type:
+a) Length
 b) Area
-c) Volumen
-d) Peso
-    ''')
+c) Volume
+d) Weight''')
     input2 = input()
     if input2 == 'a':
-        vai1 = input('Valor: ')
-        vail2 = input('Unidad: ')
-        vail3 = input('Unidad 2: ')
+        vai1 = input('Value: ')
+        vail2 = input('Unit: ')
+        vail3 = input('Unit 2: ')
         if vai1 != '':
             if vail2 != '':
                 if vail3 != '':
@@ -883,11 +882,11 @@ d) Peso
                     else:
                         transf1(float(vai1), vail2, vail3, r)
                 else:
-                    print('No se puede realizar la operacion con los datos aportados')
+                    print('Unable to realize operation with given data')
             else:
-                print('No se puede realizar la operacion con los datos aportados')
+                print('Unable to realize operation with given data')
         else:
-            print('No se puede realizar la operacion con los datos aportados')
+            print('Unable to realize operation with given data')
 
     elif input2 == 'b':
         pass
